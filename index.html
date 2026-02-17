@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapse FC25 ✦ Premium Linktree</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0a0a0f;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* Premium animated background */
+        .premium-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(circle at 20% 20%, #2a1b3d, #0a0a0f 50%);
+        }
+
+        /* Animated gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            mix-blend-mode: screen;
+            animation: orbFloat 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #a8e6cf, #ffd3b6);
+            bottom: -200px;
+            left: -200px;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #ffaaa5, #ffd3b6);
+            top: 40%;
+            left: 60%;
+            animation-delay: -10s;
+        }
+
+        /* Luxury pattern overlay */
+        .pattern-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, 
+                    rgba(255, 255, 255, 0.02) 0px, 
+                    rgba(255, 255, 255, 0.02) 2px,
+                    transparent 2px, 
+                    transparent 10px),
+                radial-gradient(circle at 50% 50%, 
+                    rgba(255, 255, 255, 0.1) 1px, 
+                    transparent 1px);
+            background-size: 50px 50px, 30px 30px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: particleFloat 15s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(40px, 40px) scale(1.1); }
+        }
+
+        /* Main container with luxury glass effect */
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(20, 15, 30, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px;
+            padding: 45px 35px;
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Inner glow */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Luxury corner accents */
+        .corner {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-style: solid;
+            border-color: rgba(255, 215, 0, 0.3);
+            pointer-events: none;
+        }
+
+        .corner-tl {
+            top: 20px;
+            left: 20px;
+            border-width: 2px 0 0 2px;
+        }
+
+        .corner-tr {
+            top: 20px;
+            right: 20px;
+            border-width: 2px 2px 0 0;
+        }
+
+        .corner-bl {
+            bottom: 20px;
+            left: 20px;
+            border-width: 0 0 2px 2px;
+        }
+
+        .corner-br {
+            bottom: 20px;
+            right: 20px;
+            border-width: 0 2px 2px 0;
+        }
+
+        /* Header dengan avatar premium */
+        .header {
+            text-align: center;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .avatar-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Premium avatar frame */
+        .avatar-frame {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4, #ffd700);
+            background-size: 300% 300%;
+            z-index: 1;
+            animation: frameRotate 8s linear infinite;
+            opacity: 0.7;
+        }
+
+        .avatar-frame::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: #1a1a2e;
+            border-radius: 45px;
+            z-index: -1;
+        }
+
+        /* Luxury gemstone effect */
+        .gemstone {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: gold;
+            border-radius: 50%;
+            bottom: -5px;
+            right: -5px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 0 20px gold;
+            animation: gemPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes gemPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px gold; }
+            50% { transform: scale(1.1); box-shadow: 0 0 30px gold; }
+        }
+
+        @keyframes frameRotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .avatar:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .avatar:hover + .avatar-frame {
+            animation-duration: 4s;
+        }
+
+        /* Name with luxury typography */
+        .name-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff8e7, #ffd700, #fff8e7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .name-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            filter: blur(30px);
+            opacity: 0.4;
+            z-index: 1;
+            animation: nameGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes nameGlow {
+            0%, 100% { opacity: 0.3; filter: blur(25px); }
+            50% { opacity: 0.6; filter: blur(35px); }
+        }
+
+        .title {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        /* Premium username section with blue verified badge */
+        .username-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .username-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 20px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .username-badge span {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+        }
+
+        /* Blue verified badge - seperti Twitter/X */
+        .verified-blue {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: #1d9bf0;
+            border-radius: 50%;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 0 15px #1d9bf0;
+            animation: verifiedPulse 2s ease-in-out infinite;
+        }
+
+        /* Username kedua dengan format @Dapse.fc25 */
+        .secondary-username {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(29, 155, 240, 0.1);
+            padding: 6px 18px;
+            border-radius: 100px;
+            border: 1px solid rgba(29, 155, 240, 0.3);
+            backdrop-filter: blur(10px);
+            font-size: 14px;
+        }
+
+        .secondary-username span {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .secondary-username .verified-blue {
+            width: 18px;
+            height: 18px;
+            font-size: 11px;
+        }
+
+        @keyframes verifiedPulse {
+            0%, 100% { box-shadow: 0 0 10px #1d9bf0; transform: scale(1); }
+            50% { box-shadow: 0 0 20px #1d9bf0; transform: scale(1.1); }
+        }
+
+        /* Bio premium */
+        .bio {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 1.8;
+            padding: 20px 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            position: relative;
+            font-style: italic;
+            backdrop-filter: blur(10px);
+        }
+
+        .bio::before,
+        .bio::after {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            color: #ffd700;
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .bio::before {
+            top: -10px;
+            left: 10px;
+        }
+
+        .bio::after {
+            bottom: -30px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+
+        /* Links container */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Premium link styling */
+        .link {
+            display: flex;
+            align-items: center;
+            padding: 18px 28px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 100px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            font-size: 17px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Premium shimmer effect */
+        .link-shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: left 0.7s ease;
+        }
+
+        .link:hover .link-shimmer {
+            left: 100%;
+        }
+
+        /* Premium border gradient */
+        .link::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #ffd700, #ff6b6b, #4ecdc4, #ffd700);
+            background-size: 300% 300%;
+            border-radius: 100px;
+            opacity: 0;
+            z-index: -1;
+            animation: gradientMove 6s ease infinite;
+            transition: opacity 0.4s ease;
+        }
+
+        .link:hover::before {
+            opacity: 0.8;
+        }
+
+        .link:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: transparent;
+            box-shadow: 
+                0 15px 30px -10px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Icon container premium */
+        .link-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 107, 107, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease;
+            font-size: 24px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .link:hover .link-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 107, 107, 0.2));
+            border-color: #ffd700;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Platform-specific icon colors */
+        .link-wa .link-icon { color: #25D366; }
+        .link-ig .link-icon { color: #E4405F; }
+        .link-grup .link-icon { color: #ffd700; }
+        .link-channel .link-icon { color: #4ecdc4; }
+
+        /* Text link premium */
+        .link-text {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .link-sub {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        /* Premium badge */
+        .link-badge {
+            background: rgba(255, 215, 0, 0.15);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            color: #ffd700;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            margin-left: 10px;
+            white-space: nowrap;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Arrow icon premium */
+        .link-arrow {
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            transition: all 0.4s ease;
+            margin-left: 15px;
+        }
+
+        .link:hover .link-arrow {
+            color: #ffd700;
+            transform: translateX(8px) rotate(-45deg);
+        }
+
+        /* Premium divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 20px 0 10px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .divider::before {
+            margin-right: 20px;
+        }
+
+        .divider::after {
+            margin-left: 20px;
+        }
+
+        .divider span {
+            color: #ffd700;
+            font-size: 13px;
+        }
+
+        /* Stats section premium */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer premium */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .footer span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer i {
+            color: #ff6b6b;
+            animation: heartBeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                border-radius: 40px;
+            }
+
+            .avatar-container {
+                width: 110px;
+                height: 110px;
+            }
+
+            .name {
+                font-size: 28px;
+            }
+
+            .link {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+            }
+
+            .link-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+                margin-right: 15px;
+            }
+
+            .link-badge {
+                margin-left: 0;
+                margin-top: 8px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .bio {
+                font-size: 14px;
+                padding: 15px 20px;
+            }
+
+            .stats {
+                gap: 20px;
+                padding: 15px;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            .username-section {
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium background elements -->
+    <div class="premium-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="pattern-overlay"></div>
+    
+    <!-- Floating particles -->
+    <div class="particle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="particle" style="top: 30%; left: 80%; animation-delay: 2s;"></div>
+    <div class="particle" style="top: 50%; left: 40%; animation-delay: 4s;"></div>
+    <div class="particle" style="top: 70%; left: 60%; animation-delay: 6s;"></div>
+    <div class="particle" style="top: 90%; left: 10%; animation-delay: 8s;"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Luxury corner accents -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <!-- Header with premium avatar -->
+        <div class="header">
+            <div class="avatar-container">
+                <img src="https://files.catbox.moe/upywty.jpg" alt="Dapse FC25" class="avatar">
+                <div class="avatar-frame"></div>
+                <div class="gemstone">✦</div>
+            </div>
+            
+            <div class="title">✨ PREMIUM MEMBER ✨</div>
+            
+            <div class="name-wrapper">
+                <h1 class="name">Dapse FC25</h1>
+                <div class="name-glow"></div>
+            </div>
+            
+            <!-- Premium username section with dual usernames and blue verified badges -->
+            <div class="username-section">
+                <div class="username-badge">
+                    <span>@nioamirtysaanty</span>
+                    <span class="verified-blue">✓</span>
+                </div>
+                
+                <div class="secondary-username">
+                    <span>@Dapse.fc25</span>
+                    <span class="verified-blue">✓</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium bio -->
+        <div class="bio">
+            Menebar manfaat dan kebaikan melalui setiap tautan. 
+            Bergabunglah dalam perjalanan inspiratif ini.
+        </div>
+
+        <!-- Premium links -->
+        <div class="links">
+            <!-- WhatsApp Personal -->
+            <a href="https://wa.me/27731273481" class="link link-wa" target="_blank">
+                <div class="link-shimmer"></div>
+                <div class="link-icon">📱</div>
+                <div class="link-text">
+                    <div class="link-title">WhatsApp Personal</div>
+                    <div class="link-sub">+27 73-127-3481</div>
+                </div>
+                <span class="link-badge">prioritas</span>
+                <span class="link-arrow">↗</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/nioamirtysaanty" class="link link-ig" target="_blank">
+                <div class="link-shimmer"></div>
+                <div class="link-icon">📷</div>
+                <div class="link-text">
+                    <div class="link-title">Instagram</div>
+                    <div class="link-sub">@nioamirtysaanty</div>
+                </div>
+                <span class="link-badge">aktif</span>
+                <span class="link-arrow">↗</span>
+            </a>
+
+            <!-- Premium divider -->
+            <div class="divider">
+                <span>✦ PREMIUM COMMUNITY ✦</span>
+            </div>
+
+            <!-- Channel WhatsApp -->
+            <a href="https://whatsapp.com/channel/0029Vb7xeWDKLaHr6alcJV2q" class="link link-channel" target="_blank">
+                <div class="link-shimmer"></div>
+                <div class="link-icon">📢</div>
+                <div class="link-text">
+                    <div class="link-title">Channel WhatsApp</div>
+                    <div class="link-sub">Update & Informasi Eksklusif</div>
+                </div>
+                <span class="link-badge">4.2k members</span>
+                <span class="link-arrow">↗</span>
+            </a>
+
+            <!-- Grup WhatsApp Publik -->
+            <a href="https://chat.whatsapp.com/JEtxC6H0A4PJBwnc6YZyGr" class="link link-grup" target="_blank">
+                <div class="link-shimmer"></div>
+                <div class="link-icon">👥</div>
+                <div class="link-text">
+                    <div class="link-title">Grup Publik</div>
+                    <div class="link-sub">Diskusi & Silaturahmi</div>
+                </div>
+                <span class="link-badge">1.8k members</span>
+                <span class="link-arrow">↗</span>
+            </a>
+
+            <!-- Grup Premium -->
+            <a href="https://chat.whatsapp.com/JEtxC6H0A4PJBwnc6YZyGr?mode=gi_t" class="link link-grup" target="_blank">
+                <div class="link-shimmer"></div>
+                <div class="link-icon">🌟</div>
+                <div class="link-text">
+                    <div class="link-title">Grup Premium</div>
+                    <div class="link-sub">Mode Khusus • Eksklusif</div>
+                </div>
+                <span class="link-badge">limited</span>
+                <span class="link-arrow">↗</span>
+            </a>
+        </div>
+
+        <!-- Premium stats -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value">1K+</div>
+                <div class="stat-label">Followers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">400+</div>
+                <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">5+</div>
+                <div class="stat-label">Posts</div>
+            </div>
+        </div>
+
+        <!-- Premium footer -->
+        <div class="footer">
+            <span>✦ 2026 ✦</span>
+            <span>❤️ <i>Dapse FC25</i></span>
+            <span>✦ PREMIUM ✦</span>
+        </div>
+    </div>
+</body>
+  </html>
